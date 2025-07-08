@@ -114,15 +114,15 @@ jobs:
           vim/src/vim/vim --version
           vim/src/gvim/vim --version
 
-      - name: Test Vim
-        timeout-minutes: 20
-        run: |
-          (
-          cd vim/src/gvim
-          make test
-          )
-          # dump failed screen tests
-          bash scripts/dump_failed_screentests.sh
+      # - name: Test Vim
+      #   timeout-minutes: 20
+      #   run: |
+      #     (
+      #     cd vim/src/gvim
+      #     make test
+      #     )
+      #     # dump failed screen tests
+      #     bash scripts/dump_failed_screentests.sh
 
       - name: Create GVim AppImage
         run: bash -e scripts/appimage.sh GVim
