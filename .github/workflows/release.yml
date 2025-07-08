@@ -1,8 +1,6 @@
 name: Release AppImage
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -60,7 +58,7 @@ jobs:
            "updated=$([[ ${appimage_tag} != ${vim_tag} ]] && echo true)"
 
   create-appimage-job:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     needs: check-updates-job
 
@@ -84,10 +82,9 @@ jobs:
             gettext \
             libcanberra-dev \
             libperl-dev \
-            python2-dev \
             python3-dev \
-            liblua5.3-dev \
-            lua5.3 \
+            liblua5.4-dev \
+            lua5.4 \
             ruby-dev \
             tcl-dev \
             cscope \
@@ -96,7 +93,8 @@ jobs:
             libtool-bin \
             at-spi2-core \
             libsodium-dev \
-            gcc-10
+            xorg-dev \
+            libxkbcommon-dev
 
       - name: Update Vim
         run: |
