@@ -14,7 +14,7 @@ export CC=gcc-10
 
 typeset -a CFG_OPTS
 CFG_OPTS+=( "--enable-perlinterp" )
-CFG_OPTS+=( "--enable-pythoninterp" )
+# CFG_OPTS+=( "--enable-pythoninterp" )
 CFG_OPTS+=( "--enable-python3interp" )
 CFG_OPTS+=( "--enable-rubyinterp" )
 CFG_OPTS+=( "--enable-luainterp" )
