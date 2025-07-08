@@ -93,6 +93,7 @@ jobs:
             libtool-bin \
             at-spi2-core \
             libsodium-dev \
+            gcc-10 \
             xorg-dev \
             libxkbcommon-dev
 
